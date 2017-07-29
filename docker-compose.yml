@@ -1,0 +1,11 @@
+version: '3'
+services:
+  mediawiki:
+    image: "cent7-mediawiki:v1.01"
+    restart: always
+    container_name: mediawiki_pub
+    network_mode: bridge
+    ports:
+      - 8080:80
+    volumes:
+      - /srv/data/mediawiki:/var/www/html
